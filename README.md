@@ -7,7 +7,7 @@ A Python application that monitors system log levels (INFO, WARN, ERROR) on a re
 ```
 ├── client.py    # Local client that connects to remote server
 ├── server.py    # Remote script that analyzes syslog
-└── README.md    # This file
+└── README.md    # Documentation
 ```
 
 ## Prerequisites
@@ -131,21 +131,4 @@ If you encounter import errors:
 pip install --upgrade paramiko pandas
 ```
 
-## Scheduling (Optional)
 
-To run this automatically, you can set up a cron job:
-
-```bash
-# Edit crontab
-crontab -e
-
-# Add line to run every 5 minutes
-*/5 * * * * cd /path/to/project && python client.py
-```
-
-## Security Notes
-
-- Keep your private SSH key secure and never commit it to version control
-- Use strong passwords/keys for SSH access
-- Consider using SSH config files for easier connection management
-- Regularly rotate your SSH keys
